@@ -1,0 +1,16 @@
+{
+  "name": "drupal/abp_theme",
+  "description": "Abp base theme.",
+  "type": "drupal-theme",
+  "license": "GPL-2.0-or-later",
+  "homepage": "https://www.drupal.org/project/abp_theme",
+  "keywords": [
+    "Drupal",
+    "ABP",
+    "Theme"
+  ],
+  "authors": [{
+    "name": "Oscar",
+    "role": "Developer"
+  }]
+}
