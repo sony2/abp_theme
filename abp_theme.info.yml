@@ -6,7 +6,7 @@ package: Custom
 core: 8.x
 core_version_requirement: ^8 || ^9 || ^10
 dependencies:
-  - openchurch_core:openchurch_core
+  - abp_core:abp_core
 libraries:
   - abp_theme/global
 

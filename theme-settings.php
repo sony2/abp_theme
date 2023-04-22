@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Theme settings form for OpenChurch Theme theme.
+ * Theme settings form for ABP Theme theme.
  */
 
 use Drupal\Component\Utility\Color;
@@ -11,7 +11,7 @@ use Drupal\Core\StringTranslation\TranslatableMarkup;
 /**
  * Implements hook_form_system_theme_settings_alter().
  */
-function openchurch_theme_form_system_theme_settings_alter(&$form, &$form_state) {
+function abp_theme_form_system_theme_settings_alter(&$form, &$form_state) {
 
   $form['custom_colors'] = [
     '#type' => 'details',
