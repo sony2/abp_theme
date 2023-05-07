@@ -62,3 +62,15 @@ preview:
   css:
     component:
       css/preview.css: {}
+
+search-narrow:
+  css:
+    component:
+      css/header-search-narrow.css: {}
+
+search-wide:
+  css:
+    component:
+      css/header-search-wide.css: {}
+  js:
+    js/search.js: {}
