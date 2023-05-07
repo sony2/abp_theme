@@ -13,6 +13,8 @@ global:
     - "abp_theme/icons-css"
     - "abp_theme/popper-js"
     - "abp_theme/preview"
+    - "abp_theme/search-narrow"
+    - "abp_theme/search-wide"
     - "core/drupal"
 
 bootstrap-css:
