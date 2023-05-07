@@ -1,7 +1,7 @@
 {#
 /**
  * @file
- * Olivero's theme implementation for a search form block.
+ * Theme implementation for a search form block in the Secondary Menu region.
  *
  * Available variables:
  * - content: The content of this block.
@@ -18,7 +18,6 @@
   set classes = [
     'block',
     'block-search',
-    'col',
   ]
 %}
 <div{{ attributes.addClass(classes) }}>
@@ -28,8 +27,19 @@
   {% endif %}
   {{ title_suffix }}
   {% block content %}
-    <div{{ content_attributes.addClass('content', 'container-inline') }}>
-      {{ content }}
+    <button class="header-nav__search-button" aria-label="{{ 'Toggle Search Form'|t }}">
+      {% include "@abp_theme/../images/search.svg" %}
+      <div class="header-nav__search-button__close"></div>
+    </button>
+
+    <div{{ content_attributes.addClass('search-wide__wrapper') }}>
+      <div class="search-wide__container">
+        <div class="search-wide__grid">
+          {{ content }}
+        </div>
+      </div>
     </div>
   {% endblock %}
 </div>
+
+
