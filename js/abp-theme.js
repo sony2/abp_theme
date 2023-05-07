@@ -5,9 +5,6 @@
 (function (Drupal) {
 
   'use strict';
-  Drupal.abp_theme = {};
-
-
   Drupal.behaviors.abpTheme = {
     attach: function (context, settings) {
       document.addEventListener("scroll", (event) => {

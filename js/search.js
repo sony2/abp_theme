@@ -6,6 +6,9 @@
 **/
 
 (function (Drupal) {
+    Drupal.abp_theme = {};
+
+
     var searchWideButton = document.querySelector('.header-nav__search-button');
     var searchWideWrapper = document.querySelector('.search-wide__wrapper');
   
@@ -13,7 +16,7 @@
       return searchWideWrapper.classList.contains('is-active');
     }
   
-    Drupal.abp_theme.searchIsVisible = searchIsVisible();
+    Drupal.abp_theme.searchIsVisible = searchIsVisible;
   
     function handleFocus() {
       if (searchIsVisible()) {
