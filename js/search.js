@@ -13,7 +13,7 @@
       return searchWideWrapper.classList.contains('is-active');
     }
   
-    Drupal.olivero.searchIsVisible = searchIsVisible;
+    Drupal.abp_theme.searchIsVisible = searchIsVisible;
   
     function handleFocus() {
       if (searchIsVisible()) {
