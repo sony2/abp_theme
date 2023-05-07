@@ -94,6 +94,26 @@ function abp_theme_preprocess_node(&$variables) {
     $variables['location'] = $node->get('field_location')->value;
     $variables['link'] = $link;
   }
+
+  // Override belen node template.
+  if ($variables['node']->getType() == 'belen') {
+    $time = $formatted_date = $link = '';
+
+    // Format the date and time.
+    if (!empty($node->get('field_date')->value)) {
+      $date_value = $node->get('field_date')->value;
+      $date = date_create($date_value);
+      $formatted_date = date_format($date, "d F Y");
+      $time = date_format($date, "h:i A");
+      $date_short = date_format($date, "M d");
+    }
+
+    $variables['date'] = $formatted_date;
+    $variables['date_short'] = $date_short;
+    $variables['time'] = $time;
+    $variables['location'] = $node->get('field_location')->value;
+    $variables['link'] = $link;
+  }
 }
 
 /**
@@ -156,6 +176,7 @@ function abp_theme_preprocess_field(&$variables) {
     elseif ($element['#field_name'] == 'field_tags') {
       $variables['blog_path_path'] = theme_get_setting('blog_page_path');
       $variables['events_page_path'] = theme_get_setting('events_page_path');
+      $variables['belenes_page_path'] = theme_get_setting('belenes_page_path');
     }
   }
 }
@@ -201,6 +222,23 @@ function abp_theme_preprocess_page_title(&$variables) {
 
       // Append search tag to page title.
       if ($path_args[1] == $events_path && ctype_digit($path_args[2])) {
+        $taxonomy_term = \Drupal::entityTypeManager()
+          ->getStorage('taxonomy_term')
+          ->load($path_args[2]);
+
+        if (!empty($taxonomy_term)) {
+          $variables['title']['#markup'] .= ': "' . $taxonomy_term->getName() . '"';
+        }
+      }
+    }
+
+    // Append search tag to belen view page title.
+    if ($belenes_path = theme_get_setting('belenes_page_path')) {
+      // Remove leading slash.
+      $belenes_path = ltrim($belenes_path, '/');
+
+      // Append search tag to page title.
+      if ($path_args[1] == $belenes_path && ctype_digit($path_args[2])) {
         $taxonomy_term = \Drupal::entityTypeManager()
           ->getStorage('taxonomy_term')
           ->load($path_args[2]);

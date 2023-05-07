@@ -189,6 +189,15 @@ function abp_theme_form_system_theme_settings_alter(&$form, &$form_state) {
     '#required' => TRUE,
   ];
 
+  $form['path_settings']['belenes_page_path'] = [
+    '#type' => 'textfield',
+    '#title' => t('Belenes page path'),
+    '#default_value' => theme_get_setting('belenes_page_path'),
+    '#size' => 10,
+    '#description' => t('Default page path forb elenes landing page.'),
+    '#required' => TRUE,
+  ];
+
   // Add a form validate to verify if the elements has valid colors.
   $form['#validate'][] = 'validate_color_elements';
 }
