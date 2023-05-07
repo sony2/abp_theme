@@ -36,7 +36,7 @@
       }
     }
   
-    Drupal.olivero.toggleSearchVisibility = toggleSearchVisibility;
+    Drupal.abp_theme.toggleSearchVisibility = toggleSearchVisibility;
     document.addEventListener('click', function (e) {
       if (e.target.matches('.header-nav__search-button, .header-nav__search-button *')) {
         toggleSearchVisibility(!searchIsVisible());
