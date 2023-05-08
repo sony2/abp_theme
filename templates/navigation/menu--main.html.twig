@@ -90,26 +90,38 @@
         </li>
       {% endmacro %}
     </div>
-  </div>
-  <div{{ attributes.addClass(classes) }}>
-    {{ title_prefix }}
-    {% if label %}
-      <h2{{ title_attributes }}>{{ label }}</h2>
-    {% endif %}
-    {{ title_suffix }}
-    {% block content %}
-      <button class="header-nav__search-button" aria-label="{{ 'Toggle Search Form'|t }}">
-        {% include "@abp_theme/../images/search--white.svg" %}
-        <div class="header-nav__search-button__close"></div>
-      </button>
+    <div{{ attributes.addClass(classes) }}>
+      {{ title_prefix }}
+      {% if label %}
+        <h2{{ title_attributes }}>{{ label }}</h2>
+      {% endif %}
+      {{ title_suffix }}
+      {% block content %}
+        <button class="header-nav__search-button" aria-label="{{ 'Toggle Search Form'|t }}">
+          {% include "@abp_theme/../images/search--white.svg" %}
+          <div class="header-nav__search-button__close"></div>
+        </button>
 
-      <div{{ content_attributes.addClass('search-wide__wrapper') }}>
-        <div class="search-wide__container">
-          <div class="search-wide__grid">
-            {{ content }}
+        <div{{ content_attributes.addClass('search-wide__wrapper') }}>
+          <div class="search-wide__container">
+            <div class="search-wide__grid">
+              <form action="/search/node" method="get" id="search-block-form" accept-charset="UTF-8" class="search-form search-block-form">
+                <div class="js-form-item form-item js-form-type-search form-item-keys js-form-item-keys form-no-label">
+                  <label for="edit-keys" class="form-item__label visually-hidden">Buscar</label>
+                  <input title="Escriba lo que quiere buscar." placeholder="Buscar por palabra clave o frase" data-drupal-selector="edit-keys" type="search" id="edit-keys" name="keys" value="" size="15" maxlength="128" class="form-search form-element form-element--type-search form-element--api-search" />
+                </div>
+                <div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions">
+                  <button class="button--primary search-form__submit button js-form-submit form-submit" data-drupal-selector="edit-submit" type="submit" id="edit-submit" value="Buscar">
+                      <span class="icon--search"></span>
+                      <span class="visually-hidden">Buscar</span>
+                  </button>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
-      </div>
-    {% endblock %}
+      {% endblock %}
+    </div>
   </div>
+
 </nav>
