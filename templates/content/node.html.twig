@@ -95,7 +95,12 @@
         {{ content.field_image }}
       </div>
     {% endif %}
-    {{ content|without('field_image') }}
+    {% if content.field_foto_principal %}
+      <div class="shadow mb-3 rounded">
+        {{ content.field_foto_principal }}
+      </div>
+    {% endif %}
+    {{ content|without('field_image')|without('field_foto_principal') }}
   </div>
 
 </article>
