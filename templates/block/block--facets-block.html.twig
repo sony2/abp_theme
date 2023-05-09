@@ -67,8 +67,8 @@
 
 {% for facet in facets %}
   <div {{ facet.attributes.addClass('facet-block show') }}>
-    <p class="facet-block__title">{{ facet.title }}</p>
-    <div class="facet-block__content">{{ facet.content }}</div>
+    <p class="facet-block__title show">{{ facet.title }}</p>
+    <div class="facet-block__content show">{{ facet.content }}</div>
   </div>
 {% endfor %}
 
