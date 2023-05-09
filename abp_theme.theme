@@ -234,10 +234,3 @@ function abp_theme_preprocess_page_title(&$variables) {
     }
   }
 }
-
-function abp_theme_theme_suggestions_block_alter(&$suggestions, $variables) {
-  // Block suggestions for custom block bundles.
-  if (isset($variables['elements']['content']['#block_content'])) {
-    array_splice($suggestions, 1, 0, 'block__bundle__' . $variables['elements']['content']['#block_content']->bundle());
-  }
-}
