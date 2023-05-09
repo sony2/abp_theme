@@ -65,6 +65,11 @@
       {{ page.content_above }}
       <div class="container">
         <div class="row">
+          {% if page.leftbar %}
+            <div class="col-md-8 col-lg-4 mb-5">
+              {{ page.leftbar }}
+            </div>
+          {% endif %}
           {% if page.content %}
             <div class="col-lg-8">
               {{ page.content }}

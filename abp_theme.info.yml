@@ -16,6 +16,7 @@ regions:
   highlighted: Highlighted
   breadcrumb: Breadcrumb
   content_above: Content Above
+  lefbar: Leftbar
   content: Content
   sidebar: Sidebar
   content_below: Content Below
