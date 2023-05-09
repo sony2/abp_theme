@@ -67,7 +67,7 @@
 
 <section{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
-  <h3{{ title_attributes.addClass('block-title').setAttribute('data-target', '#' ~ content_id).setAttribute('data-toggle', 'collapse').setAttribute('aria-expanded','true') }}{{ block->subject }}</h3>
+  <h3{{ title_attributes.addClass('block-title').setAttribute('data-target', '#' ~ content_id).setAttribute('data-toggle', 'collapse').setAttribute('aria-expanded','true') }}{{ label }}</h3>
   {{ title_suffix }}
 
   {% block content %}
