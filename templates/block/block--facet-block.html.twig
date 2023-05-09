@@ -59,15 +59,15 @@
 {% set content_classes = [
   'block-facet__content',
   'collapse',
-  'in'
+  'in',
+  'show',
 ] %}
 
 
 <section{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
-  aaa
   {% if label %}
-    <h3{{ title_attributes.addClass('block-title').setAttribute('data-target', '#' ~ content_id).setAttribute('data-toggle', 'collapse').setAttribute('aria-expanded','true') }}>{{ label }}</h3>
+    <h3{{ title_attributes.addClass('block-title').setAttribute('data-target', '#' ~ content_id).setAttribute('data-toggle', 'collapse').setAttribute('aria-expanded','true') }}{{ label }}</h3>
   {% endif %}
   {{ title_suffix }}
 
