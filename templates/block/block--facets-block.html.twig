@@ -65,10 +65,16 @@
 ] %}
 
 
-{% for facet in facets %}
-  <div {{ facet.attributes.addClass('facet-block show') }}>
-    <p class="facet-block__title show">{{ facet.title }}</p>
-    <div class="facet-block__content show">{{ facet.content }}</div>
-  </div>
-{% endfor %}
+<section{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {% if label %}
+    <h3{{ title_attributes.addClass('block-title').setAttribute('data-target', '#' ~ content_id).setAttribute('data-toggle', 'collapse').setAttribute('aria-expanded','true') }}{{ label }}</h3>
+  {% endif %}
+  {{ title_suffix }}
 
+  {% block content %}
+    <div {{ content_attributes.addClass(content_classes).setAttribute('id', content_id).setAttribute('aria-expanded','true') }}>
+      {{ content }}
+    </div>
+  {% endblock %}
+</section>
