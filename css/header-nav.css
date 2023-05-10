@@ -213,3 +213,7 @@ img.hover-shadow {
 .facet-item {
   list-style-type: none;
 }
+
+.js-facets-checkbox-link {
+  padding-left: 0rem;
+}
