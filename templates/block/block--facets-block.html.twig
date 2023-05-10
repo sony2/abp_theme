@@ -65,14 +65,13 @@
 ] %}
 
 
-<section{{ attributes.addClass(classes) }}>
+<div{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
-  <h3{{ title_attributes.addClass('block-title').setAttribute('data-target', '#' ~ content_id).setAttribute('data-toggle', 'collapse').setAttribute('aria-expanded','true') }}{{ title }}</h3>
+  {% if label %}
+    <h2{{ title_attributes.addClass('mb-4 text-center') }}>{{ label }}</h2>
+  {% endif %}
   {{ title_suffix }}
-
   {% block content %}
-    <div {{ content_attributes.addClass(content_classes).setAttribute('id', content_id).setAttribute('aria-expanded','true') }}>
-      {{ content }}
-    </div>
+    {{ content }}
   {% endblock %}
-</section>
+</div>
