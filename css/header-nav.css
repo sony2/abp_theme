@@ -209,3 +209,7 @@ img.hover-shadow {
 .facets-checkbox {
   margin-right: 5px; 
 }
+
+.facets-item  > li {
+  list-style-type: none;
+}
