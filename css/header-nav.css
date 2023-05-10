@@ -217,3 +217,7 @@ img.hover-shadow {
 .facet-active {
   padding-left: 0rem;
 }
+
+.facet-inactive {
+  padding-left: 0rem;
+}
