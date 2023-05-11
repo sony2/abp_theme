@@ -111,8 +111,6 @@ function abp_theme_preprocess_node(&$variables) {
     $variables['date_init'] = $formatted_date;
     $variables['date_init_short'] = $date_short;
     $variables['time_init'] = $time;
-    $variables['location'] = $node->get('field_location')->value;
-    $variables['link'] = $link;
   }
   // Override belen node template.
   if ($variables['node']->getType() == 'belen') {
