@@ -70,14 +70,14 @@
 
 <div class="card text-center mb-3">
   <div class="card-body">
-    {% if date_short %}
-      <h5 class="card-subtitle pb-2 text-uppercase">{{ date_short }}</h5>
+    {% if date_init_short %}
+      <h5 class="card-subtitle pb-2 text-uppercase">{{ date_init_short }}</h5>
     {% endif %}
     {{ title_prefix }}
     <h4 class="card-title">{{ label }}</h4>
     {{ title_suffix }}
-    {% if time %}
-      <p class="lead">{{ time }}</p>
+    {% if time_init %}
+      <p class="lead">{{ time_init }}</p>
     {% endif %}
     {% if url %}
       <a href="{{ url }}" class="btn btn-primary">{{ 'Detalles'|t }} <i class="bi bi-arrow-right"></i></a>
