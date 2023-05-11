@@ -70,12 +70,17 @@
 <div class="row mb-5">
   <div class="col-sm-4 pb-3">
     <div class="shadow">
-      {{ _context.node.field_foto_principal[0].entity|file_url }}
+      {{ _context.node }}
     </div>
   </div>
   <div class="col-sm-8">
     {{ title_prefix }}
     <h3>{{ label }}</h3>
+<ol>
+  {% for key, value in _context.node.field_foto_principal[0].entity  %}
+    <li>{{ key }}</li>
+  {% endfor %}
+</ol>
     {{ title_suffix }}
     <div class="mt-3 mb-3">
       {% if content.body %}
