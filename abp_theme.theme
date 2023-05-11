@@ -112,7 +112,7 @@ function abp_theme_preprocess_node(&$variables) {
 
     $variables['date_init'] = $formatted_date;
     $variables['date_init_short'] = $date_short;
-    $variables['time_init'] = $date_value ;
+    $variables['time_init'] = $formatted_date ;
 
     // Format the date and time.
     if (!empty($node->get('field_fecha_fin')->value)) {
