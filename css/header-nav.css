@@ -243,6 +243,5 @@ img.hover-shadow {
 }
 
 .derecha {
-  margin-left: auto; 
-  margin-right: 0;
+  top: 100%;
 }
