@@ -77,7 +77,7 @@
     {{ title_prefix }}
     <h3>{{ label }}</h3>
 <ol>
-  {% for key, value in _context  %}
+  {% for key, value in _context.node  %}
     <li>{{ key }}</li>
   {% endfor %}
 </ol>
