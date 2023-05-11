@@ -72,7 +72,7 @@
     <div class="shadow">
       {{ content.field_foto_principal }}
     </div>
-    Año: {{ content.field_ano_belen }}
+    Año: {{ content.field_ano_belen|without('#link') }}
   </div>
   <div class="col-sm-8">
     {{ title_prefix }}
