@@ -75,7 +75,7 @@
     {{ title_suffix }}
     <p class="lead">{{ content.field_fecha_inicio[0] }}</p>
     {{ content.field_fecha_inicio|date('d/m/Y') }}
-    <p class="lead">{{ content.field_fecha_fin[0] }}</p>
+    <p class="lead">{{ item.content.field_fecha_fin[0] }}</p>
     {% if url %}
       <a href="{{ url }}" class="btn btn-primary">{{ 'Detalles'|t }} <i class="bi bi-arrow-right"></i></a>
     {% endif %}
