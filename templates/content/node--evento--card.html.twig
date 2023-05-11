@@ -75,14 +75,13 @@
       {% if time_init %}
       <p class="lead">{{ time_init }}</p>
       {% endif %}
-      </h5> 
-      -
+      </h5> -
     {% endif %}
     {% if date_end_short %}
       <h5 class="card-subtitle pb-2 text-uppercase">{{ date_end_short }}
-    {% if time_end %}
-      <p class="lead">{{ time_end }}</p>
-    {% endif %}     
+      {% if time_end %}
+        <p class="lead">{{ time_end }}</p>
+      {% endif %}     
       </h5>
     {% endif %}
     {{ title_prefix }}
