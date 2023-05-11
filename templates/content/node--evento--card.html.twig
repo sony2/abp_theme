@@ -74,7 +74,7 @@
     <h4 class="card-title">{{ label }}</h4><br>
     {{ title_suffix }}
     <p class="lead">{{ content.field_fecha_inicio[0] }}</p>
-    {{ item.content.field_fecha_inicio|date('d/m/Y') }}
+    {{ content.field_name['#fecha_inicio'].value | date('F d, Y')  }}
     <p class="lead">{{ content.field_fecha_fin[0] }}</p>
     {% if url %}
       <a href="{{ url }}" class="btn btn-primary">{{ 'Detalles'|t }} <i class="bi bi-arrow-right"></i></a>
