@@ -70,14 +70,14 @@
 <div class="row mb-5">
   <div class="col-sm-4 pb-3">
     <div class="shadow">
-      {{ _context.node.field_foto_principal[0] }}
+      {{ _context.node.field_foto_principal[0].entity }}
     </div>
   </div>
   <div class="col-sm-8">
     {{ title_prefix }}
     <h3>{{ label }}</h3>
 <ol>
-  {% for key, value in _context.node.field_foto_principal[0].entity.field_media_image[0].target_id  %}
+  {% for key, value in _context.node.field_foto_principal[0].entity %}
     <li>{{ key }}</li>
   {% endfor %}
 </ol>
