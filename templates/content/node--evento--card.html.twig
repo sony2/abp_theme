@@ -73,23 +73,8 @@
     {{ title_prefix }}
     <h4 class="card-title">{{ label }}</h4><br>
     {{ title_suffix }}
-    {% if date_init_short %}
-      <h5 class="card-subtitle pb-2 text-uppercase">{{ date_init_short }}
-      {% if time_init %}
-      <p class="lead">{{ time_init }}</p>
-      {% endif %}
-      </h5>
-    {% endif %}
-    <h5 class="card-subtitle pb-2 text-uppercase">{{ content.field_fecha_inicio[0].value|date("M d") }}
-    <p class="lead">{{ content.field_fecha_inicio[0].value|date("h:i A") }}</p>
-    </h5>
-    {% if date_end_short %}
-      <h5 class="card-subtitle pb-2 text-uppercase">{{ date_end_short }}
-      {% if time_end %}
-        <p class="lead">{{ content.field_fecha_inicio[0] }}</p>
-      {% endif %}     
-      </h5>
-    {% endif %}
+    <p class="lead">{{ content.field_fecha_inicio[0] }}</p>
+    <p class="lead">{{ content.field_fecha_fin[0] }}</p>
     {% if url %}
       <a href="{{ url }}" class="btn btn-primary">{{ 'Detalles'|t }} <i class="bi bi-arrow-right"></i></a>
     {% endif %}
