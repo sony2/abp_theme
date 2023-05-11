@@ -79,7 +79,7 @@
     <h3>{{ label }}</h3>
     {{ title_suffix }}
     <div class="mt-3 mb-3">
-      Año: {{ content.field_ano_belen}}
+      Año: {{ content.field_ano_belen}}<br>
       {% if content.body %}
         {% if content.body|render|striptags|length > 200 %}
           {{ content.body|render|striptags|slice(0, 200) }}...
