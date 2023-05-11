@@ -70,13 +70,11 @@
 
 <div class="card text-center mb-3">
   <div class="card-body">
-  {{ dump() }}
-
     {{ title_prefix }}
     <h4 class="card-title">{{ label }}</h4><br>
     {{ title_suffix }}
     <p class="lead">{{ content.field_fecha_inicio[0] }}</p>
-    {{ content.field_fecha_fin[0]['#text'] }}
+    {{ content.field_fecha_fin[0]['#text'] |date("m/d/Y")}}
     <p class="lead">{{ content.field_fecha_fin[0] }}</p>
     {% if url %}
       <a href="{{ url }}" class="btn btn-primary">{{ 'Detalles'|t }} <i class="bi bi-arrow-right"></i></a>
