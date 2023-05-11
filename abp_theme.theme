@@ -111,6 +111,19 @@ function abp_theme_preprocess_node(&$variables) {
     $variables['date_init'] = $formatted_date;
     $variables['date_init_short'] = $date_short;
     $variables['time_init'] = $time;
+
+    // Format the date and time.
+    if (!empty($node->get('field_fecha_fin')->value)) {
+      $date_value = $node->get('field_fecha_fin')->value;
+      $date = date_create($date_value);
+      $formatted_date = date_format($date, "d F Y");
+      $time = date_format($date, "h:i A");
+      $date_short = date_format($date, "M d");
+    }
+
+    $variables['date_end'] = $formatted_date;
+    $variables['date_end_short'] = $date_short;
+    $variables['time_end'] = $time;
   }
   // Override belen node template.
   if ($variables['node']->getType() == 'belen') {
