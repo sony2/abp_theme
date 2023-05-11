@@ -73,13 +73,13 @@
       {{ content.field_foto_principal }}
     </div>
     <br>
-    Año: {{ content.field_ano_belen}}
   </div>
   <div class="col-sm-8">
     {{ title_prefix }}
     <h3>{{ label }}</h3>
     {{ title_suffix }}
     <div class="mt-3 mb-3">
+      Año: {{ content.field_ano_belen}}
       {% if content.body %}
         {% if content.body|render|striptags|length > 200 %}
           {{ content.body|render|striptags|slice(0, 200) }}...
