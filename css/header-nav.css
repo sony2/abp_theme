@@ -233,3 +233,11 @@ img.hover-shadow {
 .bi-arrow-right {
   color: #fff;
 }
+
+.dropdown-menu {
+  background-color: #000000;
+}
+
+.dropdown-item {
+  color: #fff;
+}
