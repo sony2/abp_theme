@@ -80,7 +80,7 @@
       {% endif %}
       </h5>
     {% endif %}
-    <h5 class="card-subtitle pb-2 text-uppercase">{{ content.field_fecha_inicio|date("m/d/Y") }}</h5>
+    <h5 class="card-subtitle pb-2 text-uppercase">{{ content.field_fecha_inicio[0]|date("m/d/Y") }}</h5>
     {% if date_end_short %}
       <h5 class="card-subtitle pb-2 text-uppercase">{{ date_end_short }}
       {% if time_end %}
